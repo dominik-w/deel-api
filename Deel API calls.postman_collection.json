@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "c3ffdce9-198a-4a1b-aeb9-9e80032db627",
+		"name": "Deel API calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Main",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE}}/",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE}}/contracts/id | Get profile contracts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE}}/contracts/1",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"contracts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE}}/contracts | Get list of contracts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE}}/contracts",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"contracts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE}}/jobs/unpaid | Get unpaid jobs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE}}/jobs/unpaid",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"jobs",
+						"unpaid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE}}/jobs/:job_id/pay | Post pay for a job",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE}}/jobs/1/pay",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"jobs",
+						"1",
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE}}/balances/deposit/:userId | Post balances deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 50.25\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE}}/balances/deposit/1",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"balances",
+						"deposit",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE}}/admin/best-profession?start=<date>&end=<date>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE}}/admin/best-profession?start=2020-08-10&end=2020-08-15",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"admin",
+						"best-profession"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2020-08-10"
+						},
+						{
+							"key": "end",
+							"value": "2020-08-15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE}}/admin/best-clients?start=<date>&end=<date>&limit=<integer>",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE}}/admin/best-clients?start=2020-01-10&end=2020-09-15&limit=10",
+					"host": [
+						"{{BASE}}"
+					],
+					"path": [
+						"admin",
+						"best-clients"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2020-01-10"
+						},
+						{
+							"key": "end",
+							"value": "2020-09-15"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

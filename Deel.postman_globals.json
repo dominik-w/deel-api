@@ -1,0 +1,19 @@
+{
+	"id": "61516a5e-1a6e-41ac-8737-e5895f05ccef",
+	"values": [
+		{
+			"key": "BASE",
+			"value": "http://localhost:3001",
+			"enabled": true
+		},
+		{
+			"key": "PROFILE_ID",
+			"value": "1",
+			"enabled": true
+		}
+	],
+	"name": "Deel Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2022-07-06T07:51:15.030Z",
+	"_postman_exported_using": "Postman/7.36.5"
+}
